@@ -1,0 +1,38 @@
+{
+	"$schema": "https://cdn.jsdelivr.net/gh/uni-helper/uni-app-schemas-vscode/schemas/pages.json",
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+		}
+	],
+	// 这是带注释的 json: vscode 选择 语言模式为: jsonc
+	"subPackages": [
+		{
+			"root": "pages_index", 
+			"pages": [
+				{
+					"path": "pages/search/search_page",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false,
+						"app-plus": {
+							"bounce": "none"
+						}
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

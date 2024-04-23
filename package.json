@@ -1,0 +1,59 @@
+{
+  "name": "uni-app-path",
+  "displayName": "uni-app-path",
+  "description": "uni-app pages.json 路径悬浮及跳转",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "CcSimple",
+    "url": "https://github.com/CcSimple"
+  },
+  "engines": {
+    "node": ">=18",
+    "vscode": "^1.87.0"
+  },
+  "icon": "uni-helper.png",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "uniapp",
+    "uni-app",
+    "pages",
+    "pages.json"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onLanguage:jsonc",
+    "onLanguage:json"
+  ],
+  "main": "./out/extension.js",
+  "publisher": "cc-simple",
+  "files": [
+    "*.vsix"
+  ],
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "publish:vscode": "vsce package && vsce publish",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.2.1"
+  }
+}
